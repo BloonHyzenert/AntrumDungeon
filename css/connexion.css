@@ -7,7 +7,7 @@
   width: auto;
 }
 
-input {
+input[type="text"] {
   text-align: center;
   border-radius: 5px;
   border-color: rgba(255, 255, 255, 0.5);
