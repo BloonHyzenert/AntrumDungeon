@@ -1,0 +1,103 @@
+#forum {
+  background-image: url("../ressources/paysage5.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: auto;
+}
+
+.btn-12{
+  float: right;
+}
+
+#boutton {
+  width: fit-content;
+  color: blanchedalmond;
+  padding: 10px;
+  margin: 5px;
+  margin-left: 10%;
+  background-color: rgba(20, 20, 20, 0.5);
+  border: 3px rgba(230, 130, 0, 0.9) solid;
+}
+
+#boutton:hover{
+  cursor: pointer;
+}
+.sujets {
+  background-color: rgba(20, 20, 20, 0.5);
+  width: 80%;
+  color: blanchedalmond;
+  margin: auto;
+}
+
+th {
+  overflow: hidden;
+  margin: 1px;
+  border: 2px rgba(230, 130, 0, 0.9) solid;
+  padding: 10px;
+}
+
+td {
+  overflow: hidden;
+  margin: 2px;
+  border: 1px rgba(230, 130, 0, 0.9) solid;
+  padding: 10px;
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.sujet {
+  /*word-wrap: break-word;*/
+  width: 50%;
+}
+
+.auteur {
+  width: 30%;
+}
+
+.nombre {
+  width: 5%;
+}
+
+.dernier {
+  /*word-wrap: break-word;*/
+  width: 15%;
+}
+
+tr td a{
+  color: white;
+}
+
+tr {
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#popup{
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(20, 20, 20, 0.8);
+  top: 0px;
+  position : fixed;
+}
+
+textarea{
+  margin-top: 10px;
+  resize: none;
+  width: 100%;
+}
+
+.box{
+  width: 50%;
+  background-color: rgb(92, 92, 92);
+  padding: 3%;
+  display: block;
+  margin: auto;
+  border: 3px rgba(230, 130, 0, 0.9) solid;
+}

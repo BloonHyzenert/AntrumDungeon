@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Réservation</title>
+  <link rel="stylesheet" type="text/css" href="css/calendrier.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href="ressources/dé.png">
+  <link rel="stylesheet" type="text/css" href="css/reservation.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/calendrier.css">
+</head>
+
+
+<body>
+
+  <header>
+    <div class="menu">
+      <a id="iconeSite" href="index.html"><img src="ressources/dé.png" alt="dé"></a>
+      <a class="itemMenu" href="index.html">Accueil</a>
+      <a class="itemMenu" href="reservation.html">Réservation</a>
+      <a class="itemMenu" href="forum.html">Forum</a>
+      <a class="itemMenu" href="connexion.html">Connexion</a>
+      <a href="connexion.html"><img id="iconeCompte" src="ressources/bonhomme.png"
+          alt="personnage avec une couronne"></a>
+    </div>
+    <div id="menuDeroulant">
+      <img class="menuBtn" src="ressources/menu.png" alt="3 points suspensions" onclick="menuDeroulant()">
+      <div id="affichage" class="menuDeroulant-contenu">
+        <a class="itemMenu" href="index.html">Accueil</a>
+        <a class="itemMenu" href="reservation.html">Réservation</a>
+        <a class="itemMenu" href="forum.html">Forum</a>
+        <a class="itemMenu" href="connexion.html">Connexion</a>
+      </div>
+      <a href="connexion.html"><img id="iconeCompte" src="ressources/bonhomme.png"
+          alt="personnage avec une couronne"></a>
+    </div>
+
+  </header>
+
+  <div id="reservation">
+    <h1>
+      Réservation
+    </h1>
+    <div id="menuSalle">
+      <a href="#or">Or</a>
+      <a href="#emeraude">Emeraude</a>
+      <a href="#saphir">Saphir</a>
+      <a href="#rubis">Rubis</a>
+      <a href="#grenat">Grenat</a>
+    </div>
+  </div>
+  <div id="or">
+    <h2>
+      Salle Or
+    </h2>
+    <div class="calendar">
+      <div class="month"><a class="nav"><i class="fas fa-angle-left"></i></a>Septembre 2019<a class="nav"><i
+            class="fas fa-angle-right"></i></a></div>
+      <div class="days">
+        <span>Lun</span>
+        <span>Mar</span>
+        <span>Mer</span>
+        <span>Jeu</span>
+        <span>Ven</span>
+        <span>Sam</span>
+        <span>Dim</span>
+      </div>
+      <div class="dates">
+        <button>
+          <time>1</time>
+        </button>
+        <button>
+          <time>2</time>
+        </button>
+        <button>
+          <time>3</time>
+        </button>
+        <button>
+          <time>4</time>
+        </button>
+        <button>
+          <time>5</time>
+        </button>
+        <button>
+          <time>6</time>
+        </button>
+        <button>
+          <time>7</time>
+        </button>
+        <button>
+          <time>8</time>
+        </button>
+        <button>
+          <time>9</time>
+        </button>
+        <button>
+          <time>10</time>
+        </button>
+        <button>
+          <time>11</time>
+        </button>
+        <button>
+          <time>12</time>
+        </button>
+        <button>
+          <time>13</time>
+        </button>
+        <button>
+          <time>14</time>
+        </button>
+        <button>
+          <time>15</time>
+        </button>
+        <button>
+          <time>16</time>
+        </button>
+        <button>
+          <time>17</time>
+        </button>
+        <button class="today">
+          <time>18</time>
+        </button>
+        <button>
+          <time>19</time>
+        </button>
+        <button>
+          <time>20</time>
+        </button>
+        <button>
+          <time>21</time>
+        </button>
+        <button>
+          <time>22</time>
+        </button>
+        <button>
+          <time>23</time>
+        </button>
+        <button>
+          <time>24</time>
+        </button>
+        <button>
+          <time>25</time>
+        </button>
+        <button>
+          <time>26</time>
+        </button>
+        <button>
+          <time>27</time>
+        </button>
+        <button>
+          <time>28</time>
+        </button>
+        <button>
+          <time>29</time>
+        </button>
+        <button>
+          <time>30</time>
+        </button>
+        <button>
+          <time>31</time>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div id="emeraude">
+    <h2>
+      Salle Emeraude
+    </h2>
+    <div class="calendar">
+      <div class="month"><a class="nav"><i class="fas fa-angle-left"></i></a>Septembre 2019<a class="nav"><i
+            class="fas fa-angle-right"></i></a></div>
+      <div class="days">
+        <span>Lun</span>
+        <span>Mar</span>
+        <span>Mer</span>
+        <span>Jeu</span>
+        <span>Ven</span>
+        <span>Sam</span>
+        <span>Dim</span>
+      </div>
+      <div class="dates">
+        <button>
+          <time>1</time>
+        </button>
+        <button>
+          <time>2</time>
+        </button>
+        <button>
+          <time>3</time>
+        </button>
+        <button>
+          <time>4</time>
+        </button>
+        <button>
+          <time>5</time>
+        </button>
+        <button>
+          <time>6</time>
+        </button>
+        <button>
+          <time>7</time>
+        </button>
+        <button>
+          <time>8</time>
+        </button>
+        <button>
+          <time>9</time>
+        </button>
+        <button>
+          <time>10</time>
+        </button>
+        <button>
+          <time>11</time>
+        </button>
+        <button>
+          <time>12</time>
+        </button>
+        <button>
+          <time>13</time>
+        </button>
+        <button>
+          <time>14</time>
+        </button>
+        <button>
+          <time>15</time>
+        </button>
+        <button>
+          <time>16</time>
+        </button>
+        <button>
+          <time>17</time>
+        </button>
+        <button class="today">
+          <time>18</time>
+        </button>
+        <button>
+          <time>19</time>
+        </button>
+        <button>
+          <time>20</time>
+        </button>
+        <button>
+          <time>21</time>
+        </button>
+        <button>
+          <time>22</time>
+        </button>
+        <button>
+          <time>23</time>
+        </button>
+        <button>
+          <time>24</time>
+        </button>
+        <button>
+          <time>25</time>
+        </button>
+        <button>
+          <time>26</time>
+        </button>
+        <button>
+          <time>27</time>
+        </button>
+        <button>
+          <time>28</time>
+        </button>
+        <button>
+          <time>29</time>
+        </button>
+        <button>
+          <time>30</time>
+        </button>
+        <button>
+          <time>31</time>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div id="saphir">
+    <h2>
+      Salle Saphir
+    </h2>
+    <div class="calendar">
+      <div class="month"><a class="nav"><i class="fas fa-angle-left"></i></a>Septembre 2019<a class="nav"><i
+            class="fas fa-angle-right"></i></a></div>
+      <div class="days">
+        <span>Lun</span>
+        <span>Mar</span>
+        <span>Mer</span>
+        <span>Jeu</span>
+        <span>Ven</span>
+        <span>Sam</span>
+        <span>Dim</span>
+      </div>
+      <div class="dates">
+        <button>
+          <time>1</time>
+        </button>
+        <button>
+          <time>2</time>
+        </button>
+        <button>
+          <time>3</time>
+        </button>
+        <button>
+          <time>4</time>
+        </button>
+        <button>
+          <time>5</time>
+        </button>
+        <button>
+          <time>6</time>
+        </button>
+        <button>
+          <time>7</time>
+        </button>
+        <button>
+          <time>8</time>
+        </button>
+        <button>
+          <time>9</time>
+        </button>
+        <button>
+          <time>10</time>
+        </button>
+        <button>
+          <time>11</time>
+        </button>
+        <button>
+          <time>12</time>
+        </button>
+        <button>
+          <time>13</time>
+        </button>
+        <button>
+          <time>14</time>
+        </button>
+        <button>
+          <time>15</time>
+        </button>
+        <button>
+          <time>16</time>
+        </button>
+        <button>
+          <time>17</time>
+        </button>
+        <button class="today">
+          <time>18</time>
+        </button>
+        <button>
+          <time>19</time>
+        </button>
+        <button>
+          <time>20</time>
+        </button>
+        <button>
+          <time>21</time>
+        </button>
+        <button>
+          <time>22</time>
+        </button>
+        <button>
+          <time>23</time>
+        </button>
+        <button>
+          <time>24</time>
+        </button>
+        <button>
+          <time>25</time>
+        </button>
+        <button>
+          <time>26</time>
+        </button>
+        <button>
+          <time>27</time>
+        </button>
+        <button>
+          <time>28</time>
+        </button>
+        <button>
+          <time>29</time>
+        </button>
+        <button>
+          <time>30</time>
+        </button>
+        <button>
+          <time>31</time>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="rubis">
+    <h2>
+      Salle Rubis
+    </h2>
+    <div class="calendar">
+      <div class="month"><a class="nav"><i class="fas fa-angle-left"></i></a>Septembre 2019<a class="nav"><i
+            class="fas fa-angle-right"></i></a></div>
+      <div class="days">
+        <span>Lun</span>
+        <span>Mar</span>
+        <span>Mer</span>
+        <span>Jeu</span>
+        <span>Ven</span>
+        <span>Sam</span>
+        <span>Dim</span>
+      </div>
+      <div class="dates">
+        <button>
+          <time>1</time>
+        </button>
+        <button>
+          <time>2</time>
+        </button>
+        <button>
+          <time>3</time>
+        </button>
+        <button>
+          <time>4</time>
+        </button>
+        <button>
+          <time>5</time>
+        </button>
+        <button>
+          <time>6</time>
+        </button>
+        <button>
+          <time>7</time>
+        </button>
+        <button>
+          <time>8</time>
+        </button>
+        <button>
+          <time>9</time>
+        </button>
+        <button>
+          <time>10</time>
+        </button>
+        <button>
+          <time>11</time>
+        </button>
+        <button>
+          <time>12</time>
+        </button>
+        <button>
+          <time>13</time>
+        </button>
+        <button>
+          <time>14</time>
+        </button>
+        <button>
+          <time>15</time>
+        </button>
+        <button>
+          <time>16</time>
+        </button>
+        <button>
+          <time>17</time>
+        </button>
+        <button class="today">
+          <time>18</time>
+        </button>
+        <button>
+          <time>19</time>
+        </button>
+        <button>
+          <time>20</time>
+        </button>
+        <button>
+          <time>21</time>
+        </button>
+        <button>
+          <time>22</time>
+        </button>
+        <button>
+          <time>23</time>
+        </button>
+        <button>
+          <time>24</time>
+        </button>
+        <button>
+          <time>25</time>
+        </button>
+        <button>
+          <time>26</time>
+        </button>
+        <button>
+          <time>27</time>
+        </button>
+        <button>
+          <time>28</time>
+        </button>
+        <button>
+          <time>29</time>
+        </button>
+        <button>
+          <time>30</time>
+        </button>
+        <button>
+          <time>31</time>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="grenat">
+    <h2>
+      Salle Grenat
+    </h2>
+    <div class="calendar">
+      <div class="month"><a class="nav"><i class="fas fa-angle-left"></i></a>Septembre 2019<a class="nav"><i
+            class="fas fa-angle-right"></i></a></div>
+      <div class="days">
+        <span>Lun</span>
+        <span>Mar</span>
+        <span>Mer</span>
+        <span>Jeu</span>
+        <span>Ven</span>
+        <span>Sam</span>
+        <span>Dim</span>
+      </div>
+      <div class="dates">
+        <button>
+          <time>1</time>
+        </button>
+        <button>
+          <time>2</time>
+        </button>
+        <button>
+          <time>3</time>
+        </button>
+        <button>
+          <time>4</time>
+        </button>
+        <button>
+          <time>5</time>
+        </button>
+        <button>
+          <time>6</time>
+        </button>
+        <button>
+          <time>7</time>
+        </button>
+        <button>
+          <time>8</time>
+        </button>
+        <button>
+          <time>9</time>
+        </button>
+        <button>
+          <time>10</time>
+        </button>
+        <button>
+          <time>11</time>
+        </button>
+        <button>
+          <time>12</time>
+        </button>
+        <button>
+          <time>13</time>
+        </button>
+        <button>
+          <time>14</time>
+        </button>
+        <button>
+          <time>15</time>
+        </button>
+        <button>
+          <time>16</time>
+        </button>
+        <button>
+          <time>17</time>
+        </button>
+        <button class="today">
+          <time>18</time>
+        </button>
+        <button>
+          <time>19</time>
+        </button>
+        <button>
+          <time>20</time>
+        </button>
+        <button>
+          <time>21</time>
+        </button>
+        <button>
+          <time>22</time>
+        </button>
+        <button>
+          <time>23</time>
+        </button>
+        <button>
+          <time>24</time>
+        </button>
+        <button>
+          <time>25</time>
+        </button>
+        <button>
+          <time>26</time>
+        </button>
+        <button>
+          <time>27</time>
+        </button>
+        <button>
+          <time>28</time>
+        </button>
+        <button>
+          <time>29</time>
+        </button>
+        <button>
+          <time>30</time>
+        </button>
+        <button>
+          <time>31</time>
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="icones">
+      <a href="https://www.facebook.com/"><img src="ressources/fb.png" alt="lien FB"></a>
+      <a href="https://www.linkedin.com/"><img src="ressources/in.png" alt="lien In"></a>
+      <a href="https://www.instagram.com/"><img src="ressources/insta.png" alt="lien insta"></a>
+      <a href="https://twitter.com/"><img src="ressources/twitter.png" alt="lien twitter"></a>
+    </div>
+    <p>@AleaJactaEst</p>
+  </footer>
+
+  <script type="text/javascript" src="js/menu.js">
+  </script>
+</body>
+
+</html>

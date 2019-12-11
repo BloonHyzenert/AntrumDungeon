@@ -1,0 +1,72 @@
+.chatBloc{
+    color: black;
+    width: 80vw;
+    height: 50vh;
+    overflow: auto;
+}
+
+.messBlock{
+    color: black;
+    width: 70vw;
+    height: 10vh;
+    overflow: hidden;
+    background-color:rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+.inputText{
+    overflow: auto;
+    width: 90%;
+    height: 70%;
+    resize: none;
+    border-radius: 10px;
+    box-shadow: 2px 3px rgba(230, 130, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.945);
+    padding: 5px;
+}
+
+.sujets{
+    padding: 20px;
+}
+
+h3 {
+    color: rgba(230, 130, 0, 0.9);
+    font-size: 2em;
+    padding-top : 12%;
+    margin-left: 10%;
+}
+
+.box{
+    display: block;
+    background-color: rgba(230, 130, 0, 0.9);
+    margin: 1%;
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 5px 6px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.pseudo{
+    padding: 6px;
+    width: fit-content;
+    margin-right: 2%;
+    margin-bottom: 0px;
+    overflow: hidden;
+    word-wrap: break-word;
+    background-color:rgba(0, 0, 0, 0.7);;
+    color: rgba(230, 130, 0, 0.9);
+    border-radius: 10px;
+}
+
+.message{
+    padding: 6px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+

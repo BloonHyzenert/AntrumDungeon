@@ -1,0 +1,95 @@
+#emeraude {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../ressources/emeraude.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+#or {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../ressources/or.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+#rubis {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../ressources/rubis.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+#saphir {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../ressources/saphir.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+#grenat {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../ressources/grenat.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+#reservation {
+  background-image: url("../ressources/paysage7.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: auto;
+}
+
+#menuSalle {
+  padding: 5px;
+  border-radius: 15px;
+  animation: fadein 1s;
+  width: 475px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 10px;
+  left: 10px;
+}
+
+#menuSalle a {
+  color: black;
+  padding: 10px;
+}
+
+#menuSalle a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+h2 {
+  color: black;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width:600px) {
+  #menuSalle {
+    width: 95vw;
+  }
+  h2 {
+    font-size: 3em;
+  }
+}
