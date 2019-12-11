@@ -14,7 +14,9 @@
 <body>
 
 
-    <?php include 'header.php' ?>
+    <?php include 'header.php';
+    if(!isset($_SESSION['isConnected']) || $_SESSION['isConnected']==0)
+        header("Location: connexion.php");?>
   <div id="forum">
 
     <h1>
@@ -31,8 +33,8 @@
           <th class="dernier">Dernier</th>
         </tr>
         <tr>
-          <td class="sujet"> <a href="chat.html">Soirée Halooween : Faut-il venir déguisé?</a> </td>
-          <td class="auteur"> <a href="profil.html">Bloon</a> </td>
+          <td class="sujet"> <a href="chat.php">Soirée Halooween : Faut-il venir déguisé?</a> </td>
+          <td class="auteur"> <a href="profil.php">Bloon</a> </td>
           <td class="nombre">8</td>
           <td class="dernier">05/09/2019</td>
         </tr>

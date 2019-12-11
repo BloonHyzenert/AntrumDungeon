@@ -67,6 +67,8 @@
 
     <?php include 'footer.php' ?>
 
+        <script type="text/javascript" src="js/menu.js">
+        </script>
     <script type="text/javascript" src="js/news.js">
     </script>
 </body>

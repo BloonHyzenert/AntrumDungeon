@@ -16,6 +16,13 @@
 
     <?php include 'header.php' ?>
   <div id="forum">
+      <h1>
+        Profil de <?= $_SESSION['Pseudo']  ?>
+      </h1>
+
+ <?php if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']==1){
+echo '<a href="creation.php"><div id="boutton">Ajouter un Utilisateur</div></a>';}?>
+
 
 
   </div>

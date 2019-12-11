@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Connexion</title>
+  <title>Création</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="icon" type="image/png" href="ressources/de.png">
   <link rel="stylesheet" type="text/css" href="css/connexion.css">
@@ -18,15 +18,13 @@
   <div id="connexion">
 
     <h1>
-      Connexion
+      Création de compte
     </h1>
-    <form id="formu" action="/" method="POST">
+    <form id="formuCrea" action="/" method="POST">
       <p>Pseudo</p><input id="pseudo" type="text" name="pseudo" value="" >
       <p>Mot de Passe</p><input id="password" type="password" name="password" value="" >
+      <p>Mot de Passe Copie</p><input id="password2" type="password" name="password2" value="" >
       <div id="msgError"></div>
-      <p><a href="">Mot de passe oublié</a></p>
-      <?php if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']==1)
-      echo '<p><a href="creation.php">Ajouter un compte</a></p>';?>
       <input class="btn-12" type="submit" value="VALIDER"/>
     </form>
   </div>

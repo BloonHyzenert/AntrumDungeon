@@ -16,7 +16,9 @@
 <body>
 
 
-    <?php include 'header.php' ?>
+    <?php include 'header.php';
+    if(!isset($_SESSION['isConnected']) || $_SESSION['isConnected']==0)
+        header("Location: connexion.php");?>
 
   <div id="reservation">
     <h1>
