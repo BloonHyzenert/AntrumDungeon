@@ -21,7 +21,6 @@ else if (isset($_POST['pseudo']) && isset($_POST['password']) && isset($_POST['p
             $retour = 'Ce Pseudo est déjà pris';
         }
         else {
-            $sql= "INSERT INTO User(Pseudo,Password) VALUES ('".$_POST['pseudo']."','". password_hash($_POST['password'], PASSWORD_DEFAULT) ."')";
             $name = $_POST['pseudo'];
             $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $sql = "INSERT INTO User(Pseudo,Password) VALUES ('".$name."','".$hash."')";

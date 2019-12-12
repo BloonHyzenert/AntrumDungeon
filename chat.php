@@ -9,70 +9,52 @@
     <link rel="stylesheet" type="text/css" href="css/forum.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
-<body>
+<body onload="load()">
 
 
-    <?php include 'header.php' ?>
+    <?php include 'header.php';
+    $mysqli = new mysqli("localhost", "root", "1234", "AntreBD");
+    if ($mysqli->connect_errno) {
+        echo "Echec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+    $sql= "SELECT Forum.idForum,Subject,Date FROM Forum
+    WHERE Forum.idForum=".$_GET['idForum']."";
+    $response = $mysqli->query($sql);
+    $response->data_seek(0);
+    $row = $response->fetch_assoc();
+    $title=$row['Subject'];
+    $date=$row['Date'];?>
     <div id="forum">
 
-        <h3>Soirée Halooween : Faut-il venir déguisé?</h3>
+        <h3>[<?= $date ?>] <?= $title ?></h3>
         <div class="sujets">
-            <div class="chatBloc">
-                <div class="box">
-                    <p class="pseudo">Bloon :</p>
-                    <p class="message">Est-ce que quelqu'un aurait une réponse s'il vous plait?</p>
-                </div>
-                <div class="box">
-                    <p class="pseudo">Xaander :</p>
-                    <p class="message">
-                        Bloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooon!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    </p>
-                </div>
-                <div class="box">
-                    <p class="pseudo">Druzzt :</p>
-                    <p class="message">J'en sais rien mais ça va être une super soirée, je vais enfin pouvoir tester mon
-                        nouveau perso!!<p>
-                </div>
-                <div class="box">
-                    <p class="pseudo">Keldelroth :</p>
-                    <p class="message">Oui Bloon faut venir déguiser obligatoirement !<p>
-                </div>
-                <div class="box">
-                    <p class="pseudo">Druzzt :</p>
-                    <p class="message">Quoi ! Mais j'ai pas de déguisement!<p>
-                </div>
-                <div class="box">
-                    <p class="pseudo">Druzzt :</p>
-                    <p class="message">NOOOOOOOOONNNNNNNN!<p>
-                </div>
-                <div class="box">
-                    <p class="pseudo">Bloon :</p>
-                    <p class="message">Merci Keldelroth! et Pas de chance Druzzt :P<p>
-                </div>
-                <div class="box">
-                    <p class="pseudo">Druzzt :</p>
-                    <p class="message">NOOOOOOOOOOOOOOOOOOONNNNNNNNNNNNNNNN!!!!!!!!!!<p>
-                </div>
+            <div id="chatBloc">
+                <?php include 'listMessage.php' ?>
             </div>
         </div>
 
 
-        <div class="sujets">
+        <form id="send" class="sujets">
             <div class="messBlock">
-                <textarea class="inputText" placeholder="Saisissez votre message..."></textarea>
-                <div class="btn-12">
-                    Envoyer
-                </div>
+                <textarea id="inputText" type="text" name="Message" value="" class="inputText" placeholder="Saisissez votre message..."></textarea>
+                <?php if(!isset($_SESSION['isConnected']) || $_SESSION['isConnected']==0):?>
+                    <a href="connexion.php"><div class="btn-12">
+                        Connexion
+                    </div></a>
+                <?php else: ?>
+                    <input id="js-send" class="btn-12" value="Envoyer"/>
+                <?php endif; ?>
             </div>
-        </div>
+        </form>
     </div>
 
 
     <?php include 'footer.php' ?>
 
-    <script type="text/javascript" src="js/menu.js">
-    </script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/chat.js"></script>
 </body>

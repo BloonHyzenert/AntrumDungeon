@@ -40,7 +40,7 @@ th {
 
 td {
   overflow: hidden;
-  margin: 1px;
+  margin: 2px;
   border: 1px rgba(230, 130, 0, 0.9) solid;
   padding: 10px;
 }
@@ -56,15 +56,11 @@ table {
 }
 
 .auteur {
-  width: 25%;
+  width: 30%;
 }
 
 .nombre {
-  width: 10%;
-}
-
-.admin {
-  width: 50px;
+  width: 5%;
 }
 
 .dernier {

@@ -1,6 +1,5 @@
 $('#formu .btn-12').on('click',function(event){
     event.preventDefault();
-    console.log('AJAX');
     $.ajax({
         url : 'testConnexion.php',
         type : 'POST',
@@ -21,7 +20,6 @@ $('#formu .btn-12').on('click',function(event){
 
 $('#formuCrea .btn-12').on('click',function(event){
     event.preventDefault();
-    console.log('AJAX');
     $.ajax({
         url : 'testCreation.php',
         type : 'POST',
