@@ -32,3 +32,8 @@ Renvoi à l'Accueil
 
 ### Icon compte
 Robot pour les admins, elle renvoie au profil si un compte est actif sinon à la page de connexion.
+
+### MDP
+Admin : Bloon; Mdp : Hyzenert
+
+Compte : Xander; Mdp : Anno

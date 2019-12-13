@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  ven. 13 déc. 2019 à 11:12
+-- Généré le :  ven. 13 déc. 2019 à 15:02
 -- Version du serveur :  5.7.28-0ubuntu0.16.04.2
 -- Version de PHP :  7.3.12-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -115,8 +115,8 @@ CREATE TABLE `User` (
 --
 
 INSERT INTO `User` (`idUser`, `Pseudo`, `Password`, `isAdmin`) VALUES
-(21, 'Bloon', '$2y$10$M3Oy2gGx0DSZCQim3yj31urj267HNz8LOdIVNv49fSjWMrO3eCSv.', 1),
-(22, 'Xander', '$2y$10$OBqNsXSikvHaD9TuMTuVpuJKlIdPP7CWiYtg5UUHVjZL8pNpTKnJG', 0),
+(21, 'Bloon', '$2y$10$oa2Zj.tR8E8nefG1RYzIBegO/W.RH0PNG7Ffoauhlnf.Ul8km.deC', 1),
+(22, 'Xander', '$2y$10$BGEJWBMpsnwMRy4xNgJbLuh4oW.5AYj2yrYtGwFcq16PbFeKscGPq', 0),
 (23, 'Druzzt', '$2y$10$7/VsPaDTcpwBQfdj4sbOrukdfIwQfvhrQoMxgHMlqWhh/zIhS0c2.', 0),
 (24, 'Kelderoth', '$2y$10$Y.r2YWt1P41/NVCmxAcSnOSvhHbvRV87BR/jcvWnDyRsacdnfhNzW', 0);
 
