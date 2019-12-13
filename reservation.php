@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/reservation.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
   <link rel="stylesheet" type="text/css" href="css/calendrier.css">
+  <?php include 'global.php' ?>
 </head>
 
 

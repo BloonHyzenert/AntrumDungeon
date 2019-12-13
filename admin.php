@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="ressources/de.png">
   <link rel="stylesheet" type="text/css" href="css/admin.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
+  <?php include 'global.php' ?>
 </head>
 
 

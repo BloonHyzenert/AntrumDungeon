@@ -1,5 +1,5 @@
 #forum {
-  background-image: url("../ressources/paysage5.jpg");
+  background-image: url("../ressources/profil.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -12,7 +12,7 @@
 }
 
 #boutton {
-  width: fit-content;
+    display: inline-block;
   color: blanchedalmond;
   padding: 10px;
   margin: 5px;
@@ -40,7 +40,7 @@ th {
 
 td {
   overflow: hidden;
-  margin: 2px;
+  margin: 1px;
   border: 1px rgba(230, 130, 0, 0.9) solid;
   padding: 10px;
 }
@@ -56,11 +56,15 @@ table {
 }
 
 .auteur {
-  width: 30%;
+  width: 25%;
 }
 
 .nombre {
-  width: 5%;
+  width: 10%;
+}
+
+.admin {
+  width: 50px;
 }
 
 .dernier {

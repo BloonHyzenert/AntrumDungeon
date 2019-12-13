@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <?php include 'global.php' ?>
 </head>
 
 
@@ -27,7 +28,7 @@
 <div>
     <p class="text">Vous êtes à la recherche d'aventure, de frissons? C'est ici que vous trouverez ce qu'il vous faut! Entre traitrises, fêtes et trésors vous essayerez d'évoluer dans un environnement fascinant.
 </p></div>
-<a href="#news"><img id="bouton1" src="./ressources/bouton1.png" alt="Icon Boutton"></a>
+<a href="#news"><i id="bouton1" class="far fa-caret-square-down"></i></a>
 
     </div>
     <div id="news">

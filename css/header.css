@@ -14,7 +14,6 @@
 	src: url('../font/beyond-wonderland/BeyondWonderland.ttf');
 }
 
-
 body{
   font-family: bc;
   font-size:20px;
@@ -84,7 +83,18 @@ html {
   animation: rotate 1s infinite;
 }
 
+a {
+	text-decoration: none;
+	color: orange;
+}
+#iconeA {
+	font-size: 40px;
+	color: orange;
+}
+
 #iconeCompte {
+	font-size: 40px;
+	color: orange;
   animation: rotate 1s infinite;
 }
 

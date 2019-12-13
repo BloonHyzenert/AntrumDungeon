@@ -16,9 +16,10 @@ $response = $mysqli->query($sql);
 for ($i=0;$i<$response->num_rows;$i++) {
     $response->data_seek($i);
     $row = $response->fetch_assoc();
-echo '<div class="box">
-<a style="float:right" href="removeMess.php?idForum='.$row['idMessage'].'"><i class="fa fa-close" style="font-size:30px;color:red;"></i></a>
-    <p class="pseudo">'.$row['Pseudo'].' :</p><p class="date">'.$row['Date'].'</p>
+echo '<div class="box">';
+if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']==1)
+    echo '<a style="float:right" href="removeMess.php?idMessage='.$row['idMessage'].'&idForum='.$_GET['idForum'].'"><i class="fa fa-close" style="font-size:30px;color:red;"></i></a>';
+echo '<p class="pseudo"><a href="profil.php?idUser='.$row['idUser'].'&Pseudo='.$row['Pseudo'].'">'.$row['Pseudo'].' :</a></p> <p class="date">'.$row['Date'].'</p>
     <p class="message">'.$row['Text'].'<p>
 </div>';
 }

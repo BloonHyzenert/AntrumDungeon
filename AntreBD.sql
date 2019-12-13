@@ -2,10 +2,10 @@
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 12, 2019 at 04:26 PM
--- Server version: 5.7.28-0ubuntu0.16.04.2
--- PHP Version: 7.3.12-1+ubuntu16.04.1+deb.sury.org+1
+-- Hôte : localhost
+-- Généré le :  ven. 13 déc. 2019 à 11:12
+-- Version du serveur :  5.7.28-0ubuntu0.16.04.2
+-- Version de PHP :  7.3.12-1+ubuntu16.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `AntreBD`
+-- Base de données :  `AntreBD`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Forum`
+-- Structure de la table `Forum`
 --
 
 CREATE TABLE `Forum` (
@@ -37,17 +37,17 @@ CREATE TABLE `Forum` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `Forum`
+-- Déchargement des données de la table `Forum`
 --
 
 INSERT INTO `Forum` (`idForum`, `Subject`, `idUser`, `nbMessage`, `Date`) VALUES
-(1, 'Que pensez-vous du jeu ANNO?', 22, 3, '2019-12-12 12:29:15'),
-(3, 'SoirÃ©e Halooween : Faut-il venir dÃ©guisÃ©?', 22, 8, '2019-12-12 13:07:18');
+(1, 'Que pensez-vous du jeu ANNO?', 22, 3, '2019-12-13 10:07:51'),
+(3, 'SoirÃ©e Halooween : Faut-il venir dÃ©guisÃ©?', 22, 8, '2019-12-12 14:54:31');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Message`
+-- Structure de la table `Message`
 --
 
 CREATE TABLE `Message` (
@@ -59,7 +59,7 @@ CREATE TABLE `Message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `Message`
+-- Déchargement des données de la table `Message`
 --
 
 INSERT INTO `Message` (`idUser`, `Text`, `Date`, `idForum`, `idMessage`) VALUES
@@ -73,30 +73,34 @@ INSERT INTO `Message` (`idUser`, `Text`, `Date`, `idForum`, `idMessage`) VALUES
 (21, 'Merci Keldelroth! et Pas de chance Druzzt :P', '2019-12-12 14:53:53', 3, 8),
 (23, 'NOOOOOOOOOOOOOOOOOOONNNNNNNNNNNNNNNN!!!!!!!!!!', '2019-12-12 14:54:31', 3, 9),
 (23, 'Tout dÃ©pend si tu veux avoir ton annÃ©e ou pas ^^', '2019-12-12 14:56:23', 1, 10),
-(23, 'Sinon oui c\'est nu bon jeu!', '2019-12-12 14:58:42', 1, 11);
+(23, 'Sinon oui c\'est nu bon jeu!', '2019-12-13 10:07:51', 1, 12);
 
 --
--- Triggers `Message`
+-- Déclencheurs `Message`
 --
 DELIMITER $$
 CREATE TRIGGER `totalMessage` AFTER INSERT ON `Message` FOR EACH ROW UPDATE Forum 
 SET nbMessage = (
 SELECT COUNT(*) FROM Message
-WHERE Message.idForum = Forum.idForum)
+WHERE Message.idForum = Forum.idForum), Date = (
+SELECT Message.Date FROM Message
+WHERE Message.idForum = Forum.idForum ORDER BY Message.Date DESC LIMIT 1)
 $$
 DELIMITER ;
 DELIMITER $$
 CREATE TRIGGER `totalMessageDel` AFTER DELETE ON `Message` FOR EACH ROW UPDATE Forum 
 SET nbMessage = (
 SELECT COUNT(*) FROM Message
-WHERE Message.idForum = Forum.idForum)
+WHERE Message.idForum = Forum.idForum), Date = (
+SELECT Message.Date FROM Message
+WHERE Message.idForum = Forum.idForum ORDER BY Message.Date DESC LIMIT 1)
 $$
 DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `User`
+-- Structure de la table `User`
 --
 
 CREATE TABLE `User` (
@@ -107,7 +111,7 @@ CREATE TABLE `User` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `User`
+-- Déchargement des données de la table `User`
 --
 
 INSERT INTO `User` (`idUser`, `Pseudo`, `Password`, `isAdmin`) VALUES
@@ -117,18 +121,18 @@ INSERT INTO `User` (`idUser`, `Pseudo`, `Password`, `isAdmin`) VALUES
 (24, 'Kelderoth', '$2y$10$Y.r2YWt1P41/NVCmxAcSnOSvhHbvRV87BR/jcvWnDyRsacdnfhNzW', 0);
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `Forum`
+-- Index pour la table `Forum`
 --
 ALTER TABLE `Forum`
   ADD PRIMARY KEY (`idForum`),
   ADD KEY `idAuthor` (`idUser`);
 
 --
--- Indexes for table `Message`
+-- Index pour la table `Message`
 --
 ALTER TABLE `Message`
   ADD PRIMARY KEY (`idMessage`),
@@ -136,30 +140,30 @@ ALTER TABLE `Message`
   ADD KEY `idAuthor` (`idUser`);
 
 --
--- Indexes for table `User`
+-- Index pour la table `User`
 --
 ALTER TABLE `User`
   ADD PRIMARY KEY (`idUser`),
   ADD UNIQUE KEY `Pseudo` (`Pseudo`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `Forum`
+-- AUTO_INCREMENT pour la table `Forum`
 --
 ALTER TABLE `Forum`
   MODIFY `idForum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `Message`
+-- AUTO_INCREMENT pour la table `Message`
 --
 ALTER TABLE `Message`
-  MODIFY `idMessage` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idMessage` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `User`
+-- AUTO_INCREMENT pour la table `User`
 --
 ALTER TABLE `User`
   MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;

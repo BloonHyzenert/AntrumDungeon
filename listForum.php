@@ -13,7 +13,7 @@ for ($i=0;$i<$response->num_rows;$i++) {
     $row = $response->fetch_assoc();
 echo '<tr>
       <td class="sujet"> <a href="chat.php?idForum='.$row['idForum'].'">'.$row['Subject'].'</a> </td>
-      <td class="auteur"> <a href="profil.php?idUser='.$row['idUser'].'">'.$row['Pseudo'].'</a> </td>
+      <td class="auteur"> <a href="profil.php?idUser='.$row['idUser'].'&Pseudo='.$row['Pseudo'].'">'.$row['Pseudo'].'</a> </td>
       <td class="nombre">'.$row['nbMessage'].'</td>
       <td class="dernier">'.$row['Date'].'</td>';
       if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']==1)

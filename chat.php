@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/forum.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/chat.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <?php include 'global.php' ?>
 </head>
 
 
@@ -17,6 +17,9 @@
 
 
     <?php include 'header.php';
+    if (!isset($_GET['idForum'])) {
+        header('Location: forum.php');
+    }
     $mysqli = new mysqli("localhost", "root", "1234", "AntreBD");
     if ($mysqli->connect_errno) {
         echo "Echec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;

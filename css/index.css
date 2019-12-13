@@ -23,6 +23,7 @@
 }
 
 #bouton1 {
+    font-size: 60px;
   width: 70px;
   animation: fadein 1s;
   position: relative;
