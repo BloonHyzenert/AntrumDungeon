@@ -3,7 +3,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 200vh;
   width: auto;
 }
 
@@ -11,6 +11,29 @@
   float: right;
 }
 
+input[type="text"] {
+  text-align: center;
+  border-radius: 5px;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 6px rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+  color:rgba(230, 130, 0, 0.9);
+}
+
+form {
+    width: 290px;
+  animation: fadein 1s;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+p {
+  margin: 0px;
+  margin-top: 10px;
+}
 #boutton {
     display: inline-block;
   color: blanchedalmond;
@@ -104,4 +127,8 @@ textarea{
   display: block;
   margin: auto;
   border: 3px rgba(230, 130, 0, 0.9) solid;
+}
+.btn-12{
+    margin: auto;
+    position: relative;
 }

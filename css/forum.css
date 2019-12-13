@@ -3,7 +3,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 200vh;
   width: auto;
 }
 
@@ -12,7 +12,7 @@
 }
 
 #boutton {
-    display: inline-block;
+display: inline-block;
   color: blanchedalmond;
   padding: 10px;
   margin: 5px;

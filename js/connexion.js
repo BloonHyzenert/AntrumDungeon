@@ -38,3 +38,24 @@ $('#formuCrea .btn-12').on('click',function(event){
         }
     });
 });
+
+$('#formuModif .btn-12').on('click',function(event){
+    event.preventDefault();
+    $.ajax({
+        url : 'testModification.php',
+        type : 'POST',
+        data :{
+            oldPassword : $("#formuModif #oldPassword").val(),
+            password : $("#formuModif #password").val(),
+            password2 : $("#formuModif #password2").val(),
+        },
+        dataType:'text',
+        success : function(retour) {
+            if (retour=='success') {
+                window.location.href = 'deconnexion.php';
+            } else {
+                $('#msgError').html("Erreur : "+retour);
+            }
+        }
+    });
+});
