@@ -5,4 +5,4 @@ unset($_SESSION['idUser']);
 unset($_SESSION['Pseudo']);
 unset($_SESSION['isAdmin']);
 header('Location: connexion.php');
- ?>
+?>

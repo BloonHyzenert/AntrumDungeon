@@ -1,9 +1,7 @@
 <?php
+//Appelé en AJAX par connexion.js
+//Création d'un compte utilisateur
 session_start();
-//require_once 'connexionBDD.php';
-//$mySQL = new mySQL();
-//$bdd = new PDO('mysql:host=localhost;dbname=AntreBD;charset=utf8', 'root', '1234');
-
 $mysqli = new mysqli("localhost", "root", "1234", "AntreBD");
 if ($mysqli->connect_errno) {
     $retour = "Echec lors de la connexion à MySQL";
@@ -28,7 +26,7 @@ else if (isset($_POST['pseudo']) && isset($_POST['password']) && isset($_POST['p
             $retour='success';
         };
     } else $retour = 'Les mot de passes ne correspondent pas';
-
-}else $retour = 'Certains champs sont vides';
+}
+else $retour = 'Certains champs sont vides';
 echo $retour;
 ?>

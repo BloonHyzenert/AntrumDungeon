@@ -1,4 +1,6 @@
 <?php
+//Appelé en AJAX par connexion.js
+//Modification du mot de passe d'un compte
 session_start();
 $mysqli = new mysqli("localhost", "root", "1234", "AntreBD");
 if ($mysqli->connect_errno) {
@@ -22,7 +24,7 @@ if (isset($_POST['password2']) && isset($_POST['password']) && isset($_POST['old
         else $retour = 'Mot de Passe Incorrect';
     }
     else $retour = 'Compte Introuvable';
-
-}else $retour = 'Certains champs sont vides';
+}
+else $retour = 'Certains champs sont vides';
 echo $retour;
 ?>

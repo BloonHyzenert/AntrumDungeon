@@ -1,7 +1,6 @@
+//Inutiliser pour le moment
 function remp() {
     alert('ok')
-    //check the console for date click event
-
 function CalendarControl() {
     const calendar = new Date();
     const calendarControl = {
@@ -88,10 +87,10 @@ function CalendarControl() {
         </div>
         <div class="calendar-next"><a >></a></div>
         </div>
-        <div class="calendar-today-date">Today: 
-          ${calendarControl.calWeekDays[calendarControl.localDate.getDay()]}, 
-          ${calendarControl.localDate.getDate()}, 
-          ${calendarControl.calMonthName[calendarControl.localDate.getMonth()]} 
+        <div class="calendar-today-date">Today:
+          ${calendarControl.calWeekDays[calendarControl.localDate.getDay()]},
+          ${calendarControl.localDate.getDate()},
+          ${calendarControl.calMonthName[calendarControl.localDate.getMonth()]}
           ${calendarControl.localDate.getFullYear()}
         </div>
         <div class="calendar-body"></div></div>`;
@@ -115,7 +114,7 @@ function CalendarControl() {
           calendar.getMonth() + 1,
           calendar.getFullYear()
         );
-  
+
         // dates of current month
         for (let i = 1; i < calendarDays; i++) {
           if (i < calendarControl.firstDayNumber()) {
@@ -142,7 +141,7 @@ function CalendarControl() {
               ).innerHTML += `<div><a class="dateNumber" >${count++}</a></div>`;
           }
         }
-  
+
         //remaining dates after month dates
         for (let j = 0; j < prevDateCount + 1; j++) {
           document.querySelector(
@@ -184,8 +183,8 @@ function CalendarControl() {
     };
     calendarControl.init();
   }
-  
+
   const calendarControl = new CalendarControl();
-  
+
 
 }

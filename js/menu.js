@@ -2,7 +2,6 @@
 function menuDeroulant(){
     document.getElementById("affichage").classList.toggle("show");
 }
-
 window.onclick = function(event) {
   if (!event.target.matches('.menuBtn')) {
     var dropdowns = document.getElementsByClassName("menuDeroulant-contenu");

@@ -1,4 +1,6 @@
 <?php
+//Appelé en AJAX par chat.js
+//Ajoute un message en BDD
 session_start();
 $mess='<div class="box">
     <p class="pseudo">'.$_SESSION['Pseudo'].' :</p><p class="date">'.gmdate("Y-m-d H:i:s").'</p>
@@ -13,5 +15,4 @@ $_POST['message'] = $mysqli->real_escape_string($_POST['message']);
 
 $sql= "INSERT INTO Message(Text,idForum,idUser) VALUES ('".$_POST['message']."',".$_POST['idForum'].",".$_SESSION['idUser'].")";
 $mysqli->query($sql);
-
 echo $mess; ?>

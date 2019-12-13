@@ -17,7 +17,6 @@ $('#formu .btn-12').on('click',function(event){
         }
     });
 });
-
 $('#formuCrea .btn-12').on('click',function(event){
     event.preventDefault();
     $.ajax({
@@ -38,7 +37,6 @@ $('#formuCrea .btn-12').on('click',function(event){
         }
     });
 });
-
 $('#formuModif .btn-12').on('click',function(event){
     event.preventDefault();
     $.ajax({

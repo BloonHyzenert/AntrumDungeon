@@ -2,7 +2,6 @@ function load(){
     var objDiv = document.getElementById("chatBloc");
     objDiv.scrollTop = objDiv.scrollHeight;
 }
-
 $('#js-send').on('click',function(event){
     event.preventDefault();
     console.log('AJAX');
@@ -27,7 +26,6 @@ $('#js-send').on('click',function(event){
         });
     }
 });
-
 $('#js-create').on('click',function(event){
     event.preventDefault();
     console.log('AJAX');
@@ -44,8 +42,6 @@ $('#js-create').on('click',function(event){
                 $( "#table" ).append( retour );
                 $("#Subject").val("");
                 fermer();
-                // var objDiv = document.getElementById("table");
-                // objDiv.scrollTop = objDiv.scrollHeight;
             },
             fail: function(a,b,c){
                 console.log(a,b,c);
@@ -55,7 +51,6 @@ $('#js-create').on('click',function(event){
         $("#msgError").html("Le Sujet est invalide");
     }
 });
-
 function getURLParameter(name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
 }
